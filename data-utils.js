@@ -1,0 +1,11 @@
+- generateThreePokemon
+        - raw array of pokemon data
+        - Math.floor(Math.random() * 3) for 3 random array indexes
+            - check if they are unique
+            - while theyre not unique get 3 new indexes
+        - once we have our three uniques, get the three pokemon associated with those indexes
+        - increment those pokemon's encounter properties
+            - ask if it's in the pokedex already
+            - if not, make it. { pokemon: 'name', captured: 0, encountered: 1}
+            - if so, increment encounter
+        - populate the DOM with this data
