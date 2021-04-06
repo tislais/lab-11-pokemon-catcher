@@ -40,7 +40,6 @@ export function encounterPokemon(pokemon, index) {
         }
         matchingPokedexItem.encountered++;
     } else {
-        console.log('boop');
         const newPokedexItem = {
             id: pokemon.pokemon,
             captured: 0,
