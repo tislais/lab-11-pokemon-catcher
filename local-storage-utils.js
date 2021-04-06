@@ -1,4 +1,4 @@
-import { findById, findByName } from './utils.js';
+import { findById } from './utils.js';
 
 const POKEDEX = 'POKEDEX';
 
@@ -24,19 +24,25 @@ export function encounterPokemon(pokemon, index) {
     const poke1StatsName = document.getElementById('poke1-stats-name');
     const poke2StatsName = document.getElementById('poke2-stats-name');
     const poke3StatsName = document.getElementById('poke3-stats-name');
+    const poke1StatsCaptured = document.getElementById('poke1-stats-captured');
+    const poke2StatsCaptured = document.getElementById('poke2-stats-captured');
+    const poke3StatsCaptured = document.getElementById('poke3-stats-captured');
 
     if (matchingPokedexItem) {
         if (index === 0) { 
             poke1StatsEncountered.textContent = matchingPokedexItem.encountered;
             poke1StatsName.textContent = matchingPokedexItem.id;
+            poke1StatsCaptured.textContent = matchingPokedexItem.captured;
         }
         if (index === 1) {
             poke2StatsEncountered.textContent = matchingPokedexItem.encountered;
             poke2StatsName.textContent = matchingPokedexItem.id;
+            poke2StatsCaptured.textContent = matchingPokedexItem.captured;
         }
         if (index === 2) { 
             poke3StatsEncountered.textContent = matchingPokedexItem.encountered;
             poke3StatsName.textContent = matchingPokedexItem.id;
+            poke3StatsCaptured.textContent = matchingPokedexItem.captured;
         }
         matchingPokedexItem.encountered++;
     } else {
@@ -55,7 +61,7 @@ export function encounterPokemon(pokemon, index) {
 
 export function capturePokemon(pokemon) {
     const pokedex = getPokedex();
-    const matchingPokedexItem = findByName(pokemon.pokemon);
+    const matchingPokedexItem = findById(pokedex, pokemon.pokemon);
     matchingPokedexItem.captured++;
     setPokedex(pokedex);
     return pokedex;

@@ -112,10 +112,45 @@ footer {
 
   }
 
+  body {
+      background-color: #cdcdcd;
+  }
+
+  input {
+      display: none;
+  }
+
+  input:checked ~ img {
+      background: #fff;
+  }
+
   img {
-      width: 100px;
+      width: 160px;
+      padding: 10px;
   }
 
   .hidden {
       display: none;
+  }
+
+  .random-pokemon-wrap {
+      display: flex;
+      flex-direction: row;
+  }
+
+  .poke {
+    background-color: #eee;
+    margin: 20px;
+    padding: 20px;
+  }
+
+  .poke-stats {
+      text-align: center;
+  }
+
+  .poke-stats-name {
+      font-weight: bold;
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      margin: 10px 0;
   }
