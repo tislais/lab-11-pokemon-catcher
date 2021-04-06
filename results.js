@@ -31,4 +31,4 @@ for (let item of pokedex) {
 resetButton.addEventListener('click', () => {
     localStorage.clear();
     window.location.href = './index.html';
-})
+});
