@@ -112,81 +112,104 @@ footer {
 
   }
 
-  body {
-      background-color: #cdcdcd;
-  }
+body {
+    background-color: #cdcdcd;
+}
 
-  input {
-      display: none;
-  }
+input {
+    display: none;
+}
 
-  input:checked ~ img {
-      background: #fff;
-      border-color: #ccc;
-  }
+input:checked ~ img {
+    background: #fff;
+    border-color: #ccc;
+}
 
-  img {
-      width: 160px;
-      padding: 10px;
-      border: solid 1px transparent;
-  }
+img {
+    width: 160px;
+    padding: 10px;
+    border: solid 1px transparent;
+}
 
-  .hidden {
-      display: none;
-  }
+.hidden {
+    display: none;
+}
 
-  .random-pokemon-wrap {
-      display: flex;
-      flex-direction: row;
-  }
+.random-pokemon-wrap {
+    display: flex;
+    flex-direction: row;
+}
 
-  .poke {
+.poke {
+background-color: #eee;
+margin: 20px;
+padding: 20px;
+}
+
+.poke-stats {
+    text-align: center;
+}
+
+.poke-stats-name {
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    margin: 10px 0;
+}
+
+.results-section {
+    max-width: 800px;
     background-color: #eee;
-    margin: 20px;
-    padding: 20px;
-  }
+    padding: 60px;
+    margin: 60px;
+    border-radius: 10px;
+}
 
-  .poke-stats {
-      text-align: center;
-  }
-
-  .poke-stats-name {
-      font-weight: bold;
-      font-size: 1.2rem;
-      text-transform: uppercase;
-      margin: 10px 0;
-  }
-
-  .results-section {
-      max-width: 800px;
-      background-color: #eee;
-      padding: 60px;
-  }
-
-  .pokedex-wrap {
+.pokedex-wrap {
     background: #fff;
     padding: 30px 60px;
     margin-bottom: 30px;
-  }
+    border-radius: 10px;
+    box-shadow: 0px 1px 2px #aaa;
+}
 
-  table {
-      width: 400px;
-      border-collapse: collapse;
-  }
+h1 {
+    font-size: 1.8rem;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
 
-  th {
-      text-align: left;
-      font-weight: bold;
-      border-bottom: 3px solid #ddd;
-  }
+table {
+    width: 400px;
+    border-collapse: collapse;
+}
 
-  th, td {
-      padding: 5px 10px;
-      text-transform: capitalize;
-  }
+th {
+    text-align: left;
+    font-weight: bold;
+    border-bottom: 3px solid #ddd;
+}
 
-  .td-captured,
-  .td-encountered {
-      width: 60px;
-      text-align: right;
-  }
+th, td {
+    padding: 5px 10px;
+    text-transform: capitalize;
+}
+
+td {
+    border-bottom: solid 1px #ddd;
+}
+
+tr:last-child td {
+    border-bottom-color: transparent;
+}
+
+.td-captured,
+.td-encountered {
+    width: 60px;
+    text-align: right;
+}
+
+.captures-count {
+    font-size: 1.3rem;
+}
