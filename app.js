@@ -3,6 +3,9 @@ import { findByName } from './utils.js';
 import { capturePokemon } from './local-storage-utils.js';
 
 const pokeButton = document.getElementById('poke-button');
+const pokedexLink = document.getElementById('pokedex-link');
+
+let totalEncounters = 0;
 
 function createDom() {
     const poke1Radio = document.getElementById('poke1-radio');
@@ -16,7 +19,10 @@ function createDom() {
     const poke1Image = document.querySelector('#poke1-image');
     const poke2Image = document.querySelector('#poke2-image');
     const poke3Image = document.querySelector('#poke3-image');
+
     const threePokemonLineup = generateThreePokemon();
+    pokeButton.classList.remove('hidden');
+    pokedexLink.classList.add('hidden');
 
     poke1Radio.value = threePokemonLineup[0].pokemon;
     poke2Radio.value = threePokemonLineup[1].pokemon;
@@ -33,6 +39,10 @@ function createDom() {
     poke1Label.append(poke1Image);
     poke2Label.append(poke2Image);
     poke3Label.append(poke3Image);
+    
+    totalEncounters++;
+    const encountersCount = document.getElementById('encounters-count');
+    encountersCount.textContent = 'Total Encounters: ' + totalEncounters;
 }
 
 createDom();
@@ -40,7 +50,13 @@ createDom();
 pokeButton.addEventListener('click', () => {
     const selectedPokemon = document.querySelector('input:checked');
     const pokeObject = findByName(selectedPokemon.value);
-    createDom();
-    capturePokemon(pokeObject);
+
+    if (totalEncounters < 10) {
+        createDom();
+        capturePokemon(pokeObject);
+    } else {
+        pokeButton.classList.add('hidden');
+        pokedexLink.classList.remove('hidden');
+    }
 });
 

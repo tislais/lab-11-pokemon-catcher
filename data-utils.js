@@ -20,9 +20,9 @@ export function generateThreePokemon() {
     const poke2 = pokeData[randomNumber2];
     const poke3 = pokeData[randomNumber3];
 
-    encounterPokemon(poke1);
-    encounterPokemon(poke2);
-    encounterPokemon(poke3);
+    encounterPokemon(poke1, 0);
+    encounterPokemon(poke2, 1);
+    encounterPokemon(poke3, 2);
 
     return [poke1, poke2, poke3];
 }
