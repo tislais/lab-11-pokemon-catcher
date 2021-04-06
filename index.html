@@ -21,17 +21,33 @@
     <main>
         <section class="main-section">
             <label id="poke1-label">
-                <input name="pokemon" type="radio" id="poke1-radio">
+                <input name="pokemon" type="radio" id="poke1-radio" checked>
                 <img id="poke1-image" />
             </label>
+            <div class="poke-stats">
+                <div class="poke-stats-name" id="poke1-stats-name"></div>
+                <div class="poke-stats-encounters">Encountered: <span id="poke1-stats-encountered">1</span></div>
+                <div class="poke-stats-captures">Captured: <span id="poke1-stats-captured">0</span></div>
+            </div>
             <label id="poke2-label">
                 <input name="pokemon" type="radio" id="poke2-radio">
                 <img id="poke2-image" />
             </label>
+            <div class="poke-stats">
+                <div class="poke-stats-name" id="poke2-stats-name"></div>
+                <div class="poke-stats-encounters">Encountered: <span id="poke2-stats-encountered">1</span></div>
+                <div class="poke-stats-captures">Captured: <span id="poke2-stats-captured">0</span></div>
+            </div>
             <label id="poke3-label">
                 <input name="pokemon" type="radio" id="poke3-radio">
                 <img id="poke3-image" />
             </label>
+            <div class="poke-stats">
+                <div class="poke-stats-name" id="poke3-stats-name"></div>
+                <div class="poke-stats-encounters">Encountered: <span id="poke3-stats-encountered">1</span></div>
+                <div class="poke-stats-captures">Captured: <span id="poke3-stats-captured">0</span></div>
+            </div>
+            <div id="encounters-count"></div>
             <button id="poke-button">Pokeball</button>
         </section>
     </main>
