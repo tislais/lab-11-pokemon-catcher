@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/home.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.2/dist/chart.min.js"></script>
     <title>Pokedex</title>
 </head>
 
@@ -16,10 +17,11 @@
     <main>
         <section class="results-section">
             <div class="pokedex-wrap" id="pokedex-wrap">
+                <h1>Data-Mon</h1>
                 <table>
                     <thead>
                         <tr>
-                            <th class="td-name">Name</th>
+                            <th class="td-name">Pokemon</th>
                             <th class="td-captured">Captured</th>
                             <th class="td-enountered">Encountered</th>
                         </tr>
@@ -27,7 +29,10 @@
                     <tbody id="poke-table-body">
                     </tbody>
                 </table>
-
+            </div>
+            <div class="pokedex-wrap">
+                <h1>Pika-Chart</h1>
+                <canvas id="myChart" width="400" height="400"></canvas>
             </div>
             <button id="reset-button">Start Over</button>
         </section>

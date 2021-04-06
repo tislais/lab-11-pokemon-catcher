@@ -32,3 +32,50 @@ resetButton.addEventListener('click', () => {
     localStorage.clear();
     window.location.href = './index.html';
 });
+
+const pokeNames = [];
+const pokeCaptured = [];
+const pokeEncountered = [];
+
+for (let item of pokedex) {
+    pokeNames.push(item.id);
+    pokeCaptured.push(item.captured);
+    pokeEncountered.push(item.encountered);
+}
+
+var ctx = document.getElementById('myChart').getContext('2d');
+var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: pokeNames,
+        datasets: [{
+            label: 'Captured',
+            data: pokeCaptured,
+            backgroundColor: [
+                'rgba(54, 162, 235, 0.2)'
+            ],
+            borderColor: [
+                'rgba(54, 162, 235, 1)',
+            ],
+            borderWidth: 1
+        },
+        {
+            label: 'Encountered',
+            data: pokeEncountered,
+            backgroundColor: [
+                'rgba(171, 255, 87, 0.2)'
+            ],
+            borderColor: [
+                'rgba(92, 167, 17, 0.2)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
