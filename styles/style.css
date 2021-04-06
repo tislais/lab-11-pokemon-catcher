@@ -122,11 +122,13 @@ footer {
 
   input:checked ~ img {
       background: #fff;
+      border-color: #ccc;
   }
 
   img {
       width: 160px;
       padding: 10px;
+      border: solid 1px transparent;
   }
 
   .hidden {
@@ -153,4 +155,38 @@ footer {
       font-size: 1.2rem;
       text-transform: uppercase;
       margin: 10px 0;
+  }
+
+  .results-section {
+      max-width: 800px;
+      background-color: #eee;
+      padding: 60px;
+  }
+
+  .pokedex-wrap {
+    background: #fff;
+    padding: 30px 60px;
+    margin-bottom: 30px;
+  }
+
+  table {
+      width: 400px;
+      border-collapse: collapse;
+  }
+
+  th {
+      text-align: left;
+      font-weight: bold;
+      border-bottom: 3px solid #ddd;
+  }
+
+  th, td {
+      padding: 5px 10px;
+      text-transform: capitalize;
+  }
+
+  .td-captured,
+  .td-encountered {
+      width: 60px;
+      text-align: right;
   }
