@@ -44,7 +44,7 @@ for (let item of pokedex) {
 }
 
 var ctx = document.getElementById('myChart').getContext('2d');
-var myChart = new Chart(ctx, {
+var myChart = new Chart(ctx, { // eslint-disable-line
     type: 'bar',
     data: {
         labels: pokeNames,
