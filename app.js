@@ -39,7 +39,6 @@ createDom();
 
 pokeButton.addEventListener('click', () => {
     const selectedPokemon = document.querySelector('input:checked');
-    console.log('selected pokemon value: ' + selectedPokemon.value);
     const pokeObject = findByName(selectedPokemon.value);
     createDom();
     capturePokemon(pokeObject);
