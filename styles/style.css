@@ -113,7 +113,8 @@ footer {
   }
 
 body {
-    background-color: #cdcdcd;
+    background: url(../assets/pokemon.png) no-repeat center center fixed;
+    background-size: cover;
 }
 
 input {
@@ -141,9 +142,11 @@ img {
 }
 
 .poke {
-background-color: #eee;
-margin: 20px;
-padding: 20px;
+    background-color: #d5eae5;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 2px rgb(0 0 0 / 40%);
 }
 
 .poke-stats {
@@ -159,7 +162,7 @@ padding: 20px;
 
 .results-section {
     max-width: 800px;
-    background-color: #eee;
+    background-color: #d5eae5;
     padding: 60px;
     margin: 60px;
     border-radius: 10px;
